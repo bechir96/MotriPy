@@ -1,0 +1,15 @@
+com\example\UserService.class
+com\example\UserRepository.class
+com\example\Application.class
+com\example\OperationState.class
+com\example\ConfirmationToken.class
+com\example\PasswordService.class
+com\example\User.class
+com\example\PasswordResult.class
+com\example\EmailService.class
+com\example\PasswordResetToken.class
+com\example\RegistrationController.class
+com\example\UserOperation.class
+com\example\TokenRepository.class
+com\example\Operation.class
+com\example\EmailService$1.class
