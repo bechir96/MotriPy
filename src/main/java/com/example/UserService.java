@@ -1,7 +1,6 @@
 package com.example;
 
 import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
 import java.util.UUID;
 
 public class UserService {
@@ -18,32 +17,32 @@ public class UserService {
         
     }
 
-    public void registerUser2(User user) {
+    //public void registerUser2(User user) {
         // Check if the user's first name is null or empty
-        if (user.getFirstName() == null || user.getFirstName().isEmpty()) {
-            throw new IllegalArgumentException("El nombre es obligatorio");}}
+        //if (user.getFirstName() == null || user.getFirstName().isEmpty()) {
+            //throw new IllegalArgumentException("El nombre es obligatorio");}}
     
-            public int registerUser(User user) {
-                System.out.println("Debugging");
-                // Check if the email is already registered
-                if (userRepository.getUserByEmail(user.getEmail()) != null) {
-                    throw new IllegalArgumentException("El correo electrónico ya está registrado");
-                }
-                
-                // Create the user in the database and get the userId
-                int userID = userRepository.addUser(user);
-                
-                // Check if the user was added successfully
-                if (userID <= 0) {
-                    throw new IllegalArgumentException("User not found after insertion");
-                }
-                
-                ConfirmationToken confirmationToken = generateConfirmationToken(userID);
-                    
-                // Send the confirmation email
-                emailService.sendConfirmationEmail(user.getEmail(), confirmationToken.getTokenString());
-                return userID;
-            }
+    public int registerUser(User user) {
+        // Check if the email is already registered
+        if (userRepository.getUserByEmail(user.getEmail()) != null) {
+            throw new IllegalArgumentException("El correo electrónico ya está registrado");
+        }
+        
+        // Create the user in the database and get the userId
+       
+        int userID = userRepository.addUser(user);
+        
+        // Check if the user was added successfully
+        if (userID <= 0) {
+            throw new IllegalArgumentException("User not found after insertion");
+        }
+        
+        ConfirmationToken confirmationToken = generateConfirmationToken(userID);
+            
+        // Send the confirmation email
+        emailService.sendConfirmationEmail(user.getEmail(), confirmationToken.getTokenString());
+        return userID;
+    }
 
     private ConfirmationToken generateConfirmationToken(int userId) {
         // Generate the confirmation token and set the expiration time
@@ -116,5 +115,23 @@ public class UserService {
     }
     public User getUserByEmail(String email) {
         return userRepository.getUserByEmail(email);
+    }
+    public User findUserByEmail(String email) {
+        return userRepository.getUserByEmail(email);
+    }
+    public void saveResetToken(User user, String resetToken) {
+        user.setResetToken(resetToken);
+        userRepository.updateUser(user);
+    }
+    public User findUserByResetToken(String resetToken) {
+        return userRepository.getUserByResetToken(resetToken);
+    }
+    public void updateUser(User user) {
+        userRepository.updateUser(user);
+    }
+    public void clearResetToken(User user) {
+        user.setResetToken(null);
+        user.setResetTokenExpiration(null);
+        userRepository.updateUser(user);
     }
 }

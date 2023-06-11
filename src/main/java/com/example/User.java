@@ -1,5 +1,6 @@
 package com.example;
 
+import java.sql.Timestamp;
 import java.util.Base64;
 
 public class User {
@@ -14,6 +15,8 @@ public class User {
     private String address;
     private String city;
     private String shippingAddress;
+    private String resetToken;
+    private Timestamp resetTokenExpiration;
 
     // Constructor, getters, setters, etc.
 
@@ -130,5 +133,18 @@ public class User {
     // Helper method to decode Base64 string to byte array
     private byte[] decodeBase64(String base64) {
         return Base64.getDecoder().decode(base64);
+    }
+    public void setResetToken(String resetToken) {
+        this.resetToken = resetToken;
+    }
+    
+    public String getResetToken() {
+        return resetToken;
+    }
+    public void setResetTokenExpiration(Timestamp resetTokenExpiration) {
+        this.resetTokenExpiration = resetTokenExpiration;
+    }
+    public Timestamp getResetTokenExpiration() {
+        return resetTokenExpiration;
     }
 }

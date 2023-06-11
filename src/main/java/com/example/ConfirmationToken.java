@@ -65,7 +65,4 @@ public class ConfirmationToken {
     }
 
    
-    public LocalDateTime getExpirationTimeAsString() {
-        return expirationTime;
-    }
 }

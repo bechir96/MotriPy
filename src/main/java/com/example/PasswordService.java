@@ -1,5 +1,7 @@
 package com.example;
 
+
+
 import org.mindrot.jbcrypt.BCrypt;
 
 public class PasswordService {
@@ -13,4 +15,5 @@ public class PasswordService {
     public boolean checkPassword(String plainTextPassword, String hashedPassword, String salt) {
         return BCrypt.checkpw(plainTextPassword, hashedPassword);
     }
+
 }

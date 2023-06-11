@@ -38,6 +38,9 @@ public class Application extends AbstractVerticle {
         router.post("/register").handler(registrationController::handleRegistration);
         router.get("/validate/:token").handler(registrationController::handleValidation);
         router.get("/user/:userId").handler(registrationController::handleGetUser); 
+        router.post("/login").handler(registrationController::handleLogin);  
+        router.post("/password-reset-request").handler(registrationController::handlePasswordResetRequest);
+        router.post("/password-reset/:token").handler(registrationController::handlePasswordReset);
         // Start the HTTP server
         vertx.createHttpServer()
             .requestHandler(router)

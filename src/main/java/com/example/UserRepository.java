@@ -9,10 +9,9 @@ public class UserRepository {
 
     public int addUser(User user) {
         int userId = 0;
-    
+
         try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
-            String query = "INSERT INTO Users (FirstName, LastName, Email, PasswordHash, PasswordSalt, IsConfirmed, IsDeleted) VALUES (?, ?, ?, ?, ?, ?, ?)";
-    
+            String query = "INSERT INTO Users (FirstName, LastName, Email, PasswordHash, PasswordSalt, Address, City, IsConfirmed, IsDeleted) VALUES (?, ?, ?, ?, ?, ?, ?,?,?)";
             PreparedStatement stmt = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
     
             stmt.setString(1, user.getFirstName());
@@ -20,8 +19,11 @@ public class UserRepository {
             stmt.setString(3, user.getEmail());
             stmt.setBytes(4, user.getPasswordHash());
             stmt.setBytes(5, user.getPasswordSalt());
-            stmt.setBoolean(6, user.isConfirmed());
-            stmt.setBoolean(7, user.isDeleted());
+            stmt.setString(6, user.getaddress());
+            stmt.setString(7, user.getCity());
+            //stmt.setString(8, user.getShippingAddress());
+            stmt.setBoolean(8, user.isConfirmed());
+            stmt.setBoolean(9, user.isDeleted());
     
             int affectedRows = stmt.executeUpdate();
     
@@ -44,18 +46,18 @@ public class UserRepository {
     }
 
     public User getUserByEmail(String email) {
+        String debugeo = "Prueba2";
+        System.out.println(debugeo);
         try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
-            String query = "SELECT FirstName, LastName, Email, Address FROM Users WHERE Email = ?";
+            String query = "SELECT * FROM Users WHERE Email = ?";
             PreparedStatement stmt = conn.prepareStatement(query);
             stmt.setString(1, email);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
                 User user = new User();
-                user.setFirstName(rs.getString("FirstName"));
-                user.setLastName(rs.getString("LastName"));
+                user.setUserId(rs.getInt("UserId"));
                 user.setEmail(rs.getString("Email"));
-                user.setaddress(rs.getString("Address"));
-                return user;
+                return  user;
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -66,22 +68,22 @@ public class UserRepository {
     public void updateUser(User user) {
         try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
             String query = "UPDATE Users SET FirstName = ?, LastName = ?, Email = ?, PasswordHash = ?, PasswordSalt = ?, IsConfirmed = ?, IsDeleted = ?, Address = ?, City = ?, ShippingAddress = ? WHERE UserId = ?";
-PreparedStatement stmt = conn.prepareStatement(query);
-stmt.setString(1, user.getFirstName());
-stmt.setString(2, user.getLastName());
-stmt.setString(3, user.getEmail());
-stmt.setBytes(4, user.getPasswordHash());
-stmt.setBytes(5, user.getPasswordSalt());
-stmt.setBoolean(6, user.isConfirmed());
-stmt.setBoolean(7, user.isDeleted());
-stmt.setString(8, user.getaddress());
-stmt.setString(9, user.getCity());
-stmt.setString(10, user.getShippingAddress());
-stmt.setInt(11, user.getUserId());
-            stmt.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setString(1, user.getFirstName());
+            stmt.setString(2, user.getLastName());
+            stmt.setString(3, user.getEmail());
+            stmt.setBytes(4, user.getPasswordHash());
+            stmt.setBytes(5, user.getPasswordSalt());
+            stmt.setBoolean(6, user.isConfirmed());
+            stmt.setBoolean(7, user.isDeleted());
+            stmt.setString(8, user.getaddress());
+            stmt.setString(9, user.getCity());
+            stmt.setString(10, user.getShippingAddress());
+            stmt.setInt(11, user.getUserId());
+                        stmt.executeUpdate();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
     }
 
     public void deleteUser(User user) {
@@ -113,6 +115,36 @@ stmt.setInt(11, user.getUserId());
                 user.setaddress(rs.getString("Address"));
                 user.setCity(rs.getString("City"));
                 user.setShippingAddress(rs.getString("ShippingAddress"));
+                return user;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    public User getUserByResetToken(String resetToken) {
+        try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS)) {
+            String query = "SELECT u.* FROM Users u " +
+                    "INNER JOIN PasswordResetTokens prt ON u.UserId = prt.UserId " +
+                    "WHERE prt.TokenString = ?";
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setString(1, resetToken);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                User user = new User();
+                user.setUserId(rs.getInt("UserId"));
+                user.setFirstName(rs.getString("FirstName"));
+                user.setLastName(rs.getString("LastName"));
+                user.setEmail(rs.getString("Email"));
+                user.setPasswordHash(rs.getBytes("PasswordHash"));
+                user.setPasswordSalt(rs.getBytes("PasswordSalt"));
+                user.setConfirmed(rs.getBoolean("IsConfirmed"));
+                user.setDeleted(rs.getBoolean("IsDeleted"));
+                user.setaddress(rs.getString("Address"));
+                user.setCity(rs.getString("City"));
+                user.setShippingAddress(rs.getString("ShippingAddress"));
+                user.setResetToken(rs.getString("TokenString"));
+                user.setResetTokenExpiration(rs.getTimestamp("ExpirationTime"));
                 return user;
             }
         } catch (SQLException e) {
