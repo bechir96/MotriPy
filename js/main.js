@@ -246,6 +246,7 @@ const stockProductos = [
     id: 1,
     nombre: "Encastre",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 35000,
     img: "assets/img/productos/1/encastre.jpg",
@@ -254,6 +255,7 @@ const stockProductos = [
     id: 2,
     nombre: "Encastre",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 35000,
     img: "assets/img/productos/1/encastre (2).jpg",
@@ -262,6 +264,7 @@ const stockProductos = [
     id: 3,
     nombre: "Encastre",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 35000,
     img: "assets/img/productos/1/encastre (1).jpg",
@@ -270,6 +273,7 @@ const stockProductos = [
     id: 4,
     nombre: "Encastre",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 35000,
     img: "assets/img/productos/1/encastre (3).jpg",
@@ -278,6 +282,7 @@ const stockProductos = [
     id: 5,
     nombre: "Encastre",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 35000,
     img: "assets/img/productos/1/encastre (4).jpg",
@@ -286,6 +291,7 @@ const stockProductos = [
     id: 6,
     nombre: "Encastre",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 35000,
     img: "assets/img/productos/1/encastre (5).jpg",
@@ -294,6 +300,7 @@ const stockProductos = [
     id: 7,
     nombre: "Fichas",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 35000,
     img: "assets/img/productos/2/fichas (4).jpg",
@@ -302,6 +309,7 @@ const stockProductos = [
     id: 8,
     nombre: "Fichas",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 35000,
     img: "assets/img/productos/2/fichas (5).jpg",
@@ -310,6 +318,7 @@ const stockProductos = [
     id: 9,
     nombre: "Fichas",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 35000,
     img: "assets/img/productos/2/Fichas (6).jpg",
@@ -318,6 +327,7 @@ const stockProductos = [
     id: 11,
     nombre: "Fichas",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 35000,
     img: "assets/img/productos/2/fichas (1).jpg",
@@ -326,6 +336,7 @@ const stockProductos = [
     id: 10,
     nombre: "Fichas",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 35000,
     img: "assets/img/productos/2/fichas (2).jpg",
@@ -336,12 +347,14 @@ const stockProductos = [
     cantidad: 1,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 35000,
+    Canti: 0,
     img: "assets/img/productos/2/fichas (3).jpg",
   },
   {
     id: 13,
     nombre: "Rompezabezas",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 40000,
     img: "assets/img/productos/3/rompecabezas (1).jpg",
@@ -350,6 +363,7 @@ const stockProductos = [
     id: 14,
     nombre: "Rompezabezas",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 40000,
     img: "assets/img/productos/3/rompecabezas (2).jpg",
@@ -358,6 +372,7 @@ const stockProductos = [
     id: 15,
     nombre: "Rompezabezas",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 40000,
     img: "assets/img/productos/3/rompecabezas (3).jpg",
@@ -366,6 +381,7 @@ const stockProductos = [
     id: 16,
     nombre: "Rompezabezas",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 40000,
     img: "assets/img/productos/3/rompecabezas (4).jpg",
@@ -374,6 +390,7 @@ const stockProductos = [
     id: 17,
     nombre: "Rompezabezas",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 40000,
     img: "assets/img/productos/3/rompecabezas (5).jpg",
@@ -382,6 +399,7 @@ const stockProductos = [
     id: 18,
     nombre: "Rompezabezas",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 40000,
     img: "assets/img/productos/3/rompecabezas (6).jpg",
@@ -390,6 +408,7 @@ const stockProductos = [
     id: 19,
     nombre: "Varios",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 25000,
     img: "assets/img/productos/4/Varios (1).jpg",
@@ -398,6 +417,7 @@ const stockProductos = [
     id: 20,
     nombre: "Varios",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 25000,
     img: "assets/img/productos/4/Varios (2).jpg",
@@ -406,6 +426,7 @@ const stockProductos = [
     id: 21,
     nombre: "Varios",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 25000,
     img: "assets/img/productos/4/Varios (3).jpg",
@@ -414,6 +435,7 @@ const stockProductos = [
     id: 22,
     nombre: "Varios",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 25000,
     img: "assets/img/productos/4/Varios (4).jpg",
@@ -422,6 +444,7 @@ const stockProductos = [
     id: 23,
     nombre: "Varios",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 25000,
     img: "assets/img/productos/4/Varios (5).jpg",
@@ -430,12 +453,14 @@ const stockProductos = [
     id: 24,
     nombre: "Varios",
     cantidad: 1,
+    Canti: 0,
     desc: "Descripcion del producto descripcion del producto descripcion del producto descripcion del producto",
     precio: 25000,
     img: "assets/img/productos/4/Varios (6).jpg",
   },
 ];
 let carrito = [];
+
 
 const contenedor = document.querySelector("#contenedor");
 const carritoContenedor = document.querySelector("#carritoContenedor");
@@ -445,7 +470,6 @@ const activarFuncion = document.querySelector("#activarFuncion");
 const procesarCompra = document.querySelector("#procesarCompra");
 const totalProceso = document.querySelector("#totalProceso");
 const formulario = document.querySelector('#procesar-pago');
-const cartCant = document.querySelector(".cartCant");
 
 if (activarFuncion) {
   activarFuncion.addEventListener("click", procesarPedido);
@@ -460,7 +484,6 @@ document.addEventListener("DOMContentLoaded", () => {
 if(formulario){
   formulario.addEventListener('submit', enviarCompra)
 }
-
 
 if (vaciar) {
   vaciar.addEventListener("click", () => {
@@ -485,29 +508,36 @@ if (procesarCompra) {
 }
 
 stockProductos.forEach((prod) => {
-  const { id, nombre, precio, desc, img, cantidad } = prod;
+  const { id, nombre, precio, desc, img, cantidad} = prod;
   if (contenedor) {
     contenedor.innerHTML += `
-    <div class="container articulo" style="width: 18rem;">
-    <div class="row card-body">
-    <img class="card-img-top mt-2" src="${img}" alt="Card image cap">
-      <h5 class="card-title pt-2 text-center text-success">${nombre}</h5>
-      <hr>
-      <p class="card-text text-primary">Precio: ${precio}</p>
-      <hr>
-      <p class="card-text text-black-50 descripcion">Descripcion: ${desc}</p>
-      <hr>
-      <p class="card-text text-primary">Cantidad: ${cantidad}</p>
-      <button class="btn btn-success" onclick="agregarProducto(${id})"><i class="bi bi-cart-plus"></i> Agregar Producto</button> 
+    <div class="container articulo " style="width: 18rem; data-aos="fade-up" data-aos-delay="300">
+      <div class="row card-body">
+        <img class="card-img-top mt-2" src="${img}" alt="Card image cap">
+        <h5 class="card-title pt-2 text-center text-success">${nombre}</h5>
+        <hr>
+        <p class="card-text text-primary">Precio: ${precio}</p>
+        <hr>
+        <p class="card-text text-black-50 descripcion">Descripcion: ${desc}</p>
+        <hr>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example"> 
+          <span>Stock: ${cantidad}</span>
+          <hr>
+        </div>
+        <hr>
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button class="btn btn-danger Myminus" onclick="disminuir(${id})"><i class="bi bi-cart-dash-fill"></i>Disminuir</button> 
+          <hr>
+          <button class="btn btn-success Myplus" onclick="agregarProducto(${id})"><i class="bi bi-cart-plus-fill"></i>Agregar</button> 
+      </div>
       </div>
   </div>
+  
     `;
   }
 });
-
 const agregarProducto = (id) => {
   const existe = carrito.some(prod => prod.id === id)
-
   if(existe){
     const prod = carrito.map(prod => {
       if(prod.id === id){
@@ -519,7 +549,17 @@ const agregarProducto = (id) => {
     carrito.push(item)
   }
   mostrarCarrito()
-
+};
+const disminuir = (id) => {
+  const existe = carrito.some(prod => prod.id === id)
+  if(existe){
+    const prod = carrito.map(prod => {
+      if(prod.id === id && prod.cantidad >1){
+          prod.cantidad--
+      }
+    })
+  } 
+  mostrarCarrito()
 };
 
 const mostrarCarrito = () => {
@@ -527,17 +567,18 @@ const mostrarCarrito = () => {
   if (modalBody) {
     modalBody.innerHTML = "";
     carrito.forEach((prod) => {
-      const { id, nombre, precio, desc, img, cantidad } = prod;
+      const { id, nombre, precio, img, cantidad } = prod;
       console.log(modalBody);
       modalBody.innerHTML += `
+      <br>
       <div class="modal-contenedor  border-top">
         <div>
           <img class="img-fluid img-carrito" src="${img}"/>
         </div>
         <div clas="cartCant">
-          <p>Producto: ${nombre}</p>
-          <p>Precio: ${precio}</p>
-          <p><i class="bi bi-dash"></i> ${cantidad} <i class="bi bi-plus"></i></p>
+          <h5 class="card-title pt-2 text-center text-success">${nombre}</h5>
+          <p>Precio: ${precio} ₲</p>
+          <p>Cantidad: ${cantidad}</p>
           <button class=" btnCarrito btn btn-danger"  onclick="eliminarProducto(${id})">Eliminar producto</button>
         </div>
       </div>
@@ -547,7 +588,6 @@ const mostrarCarrito = () => {
   }
 
   if (carrito.length === 0) {
-    console.log("Nada");
     modalBody.innerHTML = `
     <p class="text-center text-success parrafo">¡Aun no agregaste nada!</p>
     `;
@@ -576,33 +616,9 @@ function guardarStorage() {
 }
 
 function eliminarProducto(id) {
-  const juegueteId = id;
-  carrito = carrito.filter((juego) => juego.id !== juegueteId);
+  const juegoId = id;
+  carrito = carrito.filter((juego) => juego.id !== juegoId);
   mostrarCarrito();
-}
-const modificarCantidad = (id) =>{
-  const existe = carrito.some(prod => prod.id === id)
-  cartCant.addEventListener("click", (prod)=>{
-    if(prod.target.classList.cartCant("bi bi-plus")) {
-      if(existe){
-        const prod = carrito.map(prod => {
-          if(prod.id === id){
-            prod.cantidad++
-          }
-        })
-      }
-    }
-    if(prod.target.classList.cartCant("bi bi-dash")) {
-      if(existe){
-        const prod = carrito.map(prod => {
-          if(prod.id === id){
-            prod.cantidad--
-          }
-        })
-      }
-    }
-  })
-  mostrarCarrito()
 }
 
 function procesarPedido() {
@@ -705,4 +721,5 @@ function procesarPedido() {
 
 
 })
+
 
