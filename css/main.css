@@ -894,6 +894,9 @@ section {
 /*--------------------------------------------------------------
 # Menu Section
 --------------------------------------------------------------*/
+.menu {
+  background-color: #ffffff;
+}
 .menu .nav-tabs {
   border: 0;
 }
@@ -1246,7 +1249,9 @@ section {
 /*--------------------------------------------------------------
 # Book A Table Section
 --------------------------------------------------------------*/
-
+.book-a-table{
+  background: white;
+}
 .book-a-table .reservation-form-bg {
   background: linear-gradient(#FBFFFB,#CDEDCD);
   border-radius: 10px;
@@ -1593,7 +1598,55 @@ section {
     font-size: 36px;
   }
 }
+/*--------------------------------------------------------------
+# Perfil
+--------------------------------------------------------------*/
+.menu .tab-pane  button[type=button] {
+  background: var(--color-primary);
+  border: 0;
+  padding: 8px 50px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
 
+.menu .tab-pane  button[type=button]:hover {
+  background: #1246FF;
+  transform: scale(1.1);
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.modal .modal-footer  button[type=button] {
+  background: var(--color-primary);
+  border: 0;
+  padding: 8px 50px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.modal .modal-footer  button[type=button]:hover {
+  background: #1246FF;
+  transform: scale(1.1);
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -1734,9 +1787,8 @@ section {
   margin-left: 10px;
   color: #fff;
 }
-.text-center .btn-cambio:hover{
-  background: #32C330;
-  transform: scale(1,1);
+ .btn-cambio:hover{
+  background: #3052c3;
 }
 
 /*Tienda*/
@@ -1885,4 +1937,41 @@ a{
   align-items: center;
   box-shadow: 10px 5px 5px rgb(138, 138, 138);
   margin-bottom: 15px;
+}
+
+.modal .modal-dialog .modal-content .modal-header .iconNewPassword{
+  width: 80px;
+  height: 80px;
+}
+/*--------------------------------------------------------------
+# reocverpassword
+--------------------------------------------------------------*/
+.recuperacionContra {
+  background: linear-gradient(#FBFFFB,#CDEDCD);  
+}
+.recuperacionContra .container .section-header .reservation-form-bg{
+  margin-left: 25%;
+}
+.recuperacionContra .col-lg-6 button[type=submit] {
+  background: var(--color-primary);
+  border: 0;
+  padding: 8px 50px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.recuperacionContra .col-lg-6  button[type=submit]:hover {
+  background: #1246FF;
+  transform: scale(1.1);
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
